@@ -4,6 +4,10 @@
     <link rel="stylesheet" href="app.css" />
     <script src="app.js"></script>
     <script>
+        /**
+         * ES5 doesn't support ES6 modules and so we're using a very basic
+         * require() (see js/lib/loader.js) for using modules.
+         */
         require(['main']);
     </script>
 </head>
