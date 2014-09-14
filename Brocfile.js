@@ -1,20 +1,13 @@
-var pickFiles = require('broccoli-static-compiler');
-var compileEs6ToEs5 = require('broccoli-es6-concatenator');
+var compileEs6ToEs5 = require('broccoli-traceur');
 var compileSass = require('broccoli-sass');
 var mergeTrees = require('broccoli-merge-trees');
 
 // note: all paths are relative to the dir that the packages.json file is in
 
-// inputFiles is in js dir, outputFile is in serve's tmp dir or build's dist dir
-var js = compileEs6ToEs5('js', {
-    outputFile: '/app.js', // normally 'app.js' but plugin wants absolute path
-    loaderFile: 'lib/loader.js', // at top of app.js is require() definition
-    inputFiles: [
-        '**/*.js'
-    ],
-    ignoredModules: ['lib/loader'], // already in loaderFile above
-    wrapInEval: false
-});
+var js = compileEs6ToEs5('js', {});
+
+// need the loader.js which has the require() definition for running code on ES5
+var lib = 'lib';
 
 // 1st argument is array of inputTrees - compileSass expects an array of input
 // trees, hence the array brackets
@@ -23,7 +16,7 @@ var js = compileEs6ToEs5('js', {
 var css = compileSass(['sass'], 'main.scss', 'app.css');
 
 // srcDir is in first argument's dir and destDir is in serve's tmp dir or build's dist dir
-var html = pickFiles('html', { srcDir: '.', destDir: '.' });
+var html = 'html';
 
 //module.exports = mergeTrees([js, vendor, css, html]);
-module.exports = mergeTrees([js, css, html]);
+module.exports = mergeTrees([js, lib, css, html]);
