@@ -13,6 +13,7 @@
     "broccoli-static-compiler": "^0.1.4",
     "broccoli-sass": "^0.2.2",
     "broccoli-es6-concatenator": "^0.1.7",
-    "broccoli-merge-trees": "^0.1.4"
+    "broccoli-merge-trees": "^0.1.4",
+    "broccoli-traceur": "^0.9.0"
   }
 }
