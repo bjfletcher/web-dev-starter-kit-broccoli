@@ -1,20 +1,22 @@
 # Getting Started
 
-1. `make serve`
+1. `make` or `make serve`
 
-to start the web server on <a href="http://localhost:4200/">http://localhost:4200/</a> and watch for any changes to any of the development files.
+to build the website, serve the website on <a href="http://localhost:4200/">http://localhost:4200/</a>, and watch for any changes to the development files and rebuild on any change, and re-serve the website automatically. It will also fire Live Reload events for the web browser to automatically reload after every rebuild.
 
 2. `make open`
 
-will open the web browser.
+will open the web browser pointing to this website.
 
-3. Enable LiveReload with the web browser (install the LiveReload extension if not installed)
+3. Enable LiveReload with the web browser (install the <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en">LiveReload extension</a> if not installed). This means the web browser will automatically reload the page every time a new build is made.
 
 4. Develop away. :)
 
 To create a distribution:
 
 `make build`
+
+and the built website is in the `dist` folder.
 
 # Broccoli
 
