@@ -2,7 +2,7 @@
 
 1. `make` or `make serve`
 
-to build the website, serve the website on <a href="http://localhost:4200/">http://localhost:4200/</a>, and watch for any changes to the development files and rebuild on any change, and re-serve the website automatically. It will also fire Live Reload events for the web browser to automatically reload after every rebuild.
+to build the website, serve the website on <a href="http://localhost:4200/">http://localhost:4200/</a>, and watch for any changes to the development files and rebuild on any change and re-serve the website automatically. It will also fire Live Reload events for the web browser to automatically reload after every rebuild.
 
 2. `make open`
 
