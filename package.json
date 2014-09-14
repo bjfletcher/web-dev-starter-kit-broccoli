@@ -1,5 +1,5 @@
 {
-  "name": "broc",
+  "name": "web-dev-starter-kit-broccoli",
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "broccoli": "^0.12.3",
     "broccoli-static-compiler": "^0.1.4",
     "broccoli-sass": "^0.2.2",
-    "broccoli-merge-trees": "^0.1.4",
-    "broccoli-es6-concatenator": "^0.1.7"
+    "broccoli-es6-concatenator": "^0.1.7",
+    "broccoli-merge-trees": "^0.1.4"
   }
 }
